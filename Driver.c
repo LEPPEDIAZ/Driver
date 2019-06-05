@@ -6,7 +6,7 @@
 
 
 
-#include <linux/fs.h>		/* For the character driver support */
+#include <linux/fs.h>		
 
 
 
@@ -46,7 +46,7 @@ int ex07_close(struct inode *pinode,struct file *pfile){
 
 
 
-/* To hold the file operations performed on this device */
+
 
 struct file_operations ex07_file_operations = {
 
@@ -70,7 +70,7 @@ int ex07_simple_module_init(void)
 
 	printk(KERN_ALERT "Inside the %s function\n",__FUNCTION__);
 
-	/* Register with the kernel and indicate that we are registering a character device driver */
+	
 
 	register_chrdev(240/* Major Number */,
 
